@@ -57,10 +57,14 @@ Install authbind using your favorite package manager.
 
 Configure it to grant access to the relevant ports, e.g. to allow 80 and 443 from all users and groups:
 
+```
 sudo touch /etc/authbind/byport/80
 sudo touch /etc/authbind/byport/443
 sudo chmod 777 /etc/authbind/byport/80
 sudo chmod 777 /etc/authbind/byport/443
+```
+
+This will make the ports available.
 Now execute your command via authbind (optionally specifying --deep or other arguments, see the man page):
 
 authbind --deep /path/to/binary command line args
@@ -72,7 +76,4 @@ authbind --deep  node /somewhere/bin/pump -c /somewhere/pump.json
 This will run pump.io, as the user which will invoke it, hopefully unprivileged. An attacker which'll be able to escalate 
 privileges in some ways, will only get the privileges of the user which invokes "node". Please notice, -deep will extend the 
 privileges to any subprocess. 
-
-
-
 
