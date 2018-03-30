@@ -1,3 +1,6 @@
+**Hardening of Pump.io**
+
+
 pump.io is a nice federated social network. Unfortunately, it is developed the works-on-my-laptop way, so that it lacks 
 of the very basic security good practices. First, developers are stating you cannot (or should not) put a reverse proxy 
 in front of it. this is not good news, because a tree-tier architecture is a very basic good practice for security. Meaning,
@@ -31,7 +34,13 @@ timeouts {
 }
 
 ```
-This is enough to support the way pump.io is managing the websocket. Of course, now we have a second security bad practice.
+This is enough to support the way pump.io is managing the websocket. 
+
+*Warning*: for caddy, you need to disable http2 to make it work, invoking the server with *--http2=false* option
+
+
+Then, now we have a second security bad practice to solve.
+
 Pump.io wants to listen on port 443 for ssl, or will end in a endless loop of redirection in case of a reverse proxy. 
 This is very common in software made by "works-on-my-laptop" developers, which are only aware of localhost and have 
 no clue of security. Since they use to be the  admin of their laptops, they think it is ok to do the same on servers.
