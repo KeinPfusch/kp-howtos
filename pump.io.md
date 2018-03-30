@@ -19,7 +19,7 @@ proxy / https://1.2.3.4:443 {
 		    insecure_skip_verify
 		    transparent
 		    header_upstream Connection {>Connection}
-        header_upstream Upgrade {>Upgrade} 
+                    header_upstream Upgrade {>Upgrade} 
 		    }
 
 
