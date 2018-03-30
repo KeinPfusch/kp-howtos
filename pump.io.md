@@ -5,7 +5,7 @@ no server providing the business logic should be directly exposed to the interne
 behind of some separation element, which sanitizes the protocol.
 
 Actually it is not true that pump.io can't work with a reverse proxy in front of it: it is just a matter to configure it properly.
-I personally managed to configure caddyserver ( https://caddyserver.com/ ) to take adnavtage of ACME support and to sanitize 
+I personally managed to configure caddyserver ( https://caddyserver.com/ ) to make use of ACME support and to sanitize 
 the protocol. The problems which I faced were easy to solve, with the following configuration:
 
 ```
