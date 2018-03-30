@@ -1,4 +1,4 @@
-**Hardening of Pump.io**
+***Hardening of Pump.io***
 
 
 pump.io is a nice federated social network. Unfortunately, it is developed the works-on-my-laptop way, so that it lacks 
@@ -36,7 +36,7 @@ timeouts {
 ```
 This is enough to support the way pump.io is managing the websocket. 
 
-*Warning*: for caddy, you need to disable http2 to make it work, invoking the server with *--http2=false* option
+**Warning**: for caddy, you need to disable http2 to make it work, invoking the server with *--http2=false* option
 
 
 Then, now we have a second security bad practice to solve.
