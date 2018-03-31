@@ -1,8 +1,8 @@
 ***Hardening of Pump.io***
 
 
-pump.io is a nice federated social network. Unfortunately, it is developed the works-on-my-laptop way, so that it lacks 
-of the very basic security good practices. First, developers are stating you cannot (or should not) put a reverse proxy 
+pump.io is a nice federated social network. Unfortunately, it is developed the _works-on-my-laptop_ way, so that it lacks 
+the very basic security good practices. First, developers are stating you cannot (or should not) put a reverse proxy 
 in front of it. this is not good news, because a tree-tier architecture is a very basic good practice for security. Meaning,
 no server providing the business logic should be directly exposed to the internet: the business logic should be hosted only in
 behind of some separation element, which sanitizes the protocol.
