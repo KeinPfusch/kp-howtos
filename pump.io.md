@@ -89,3 +89,15 @@ This will run pump.io, as the user which will invoke it, hopefully unprivileged.
 privileges in some ways, will only get the privileges of the user which invokes "node". Please notice, -deep will extend the 
 privileges to any subprocess. 
 
+Another linux  command allows may give the caddy executable the right to make use of the socket, like
+
+```
+setcap cap_net_bind_service=+ep node
+```
+
+unfortunately, doing this any node application would inherit those privileges, which we don't want. Then I don't suggest to do that.
+
+
+
+
+
